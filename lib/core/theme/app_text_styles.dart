@@ -6,7 +6,6 @@ abstract class AppTextStyles {
   static TextStyle bold40 = TextStyle(
     fontSize: 40.sp,
     fontWeight: FontWeight.w700,
-   
   );
 
   static TextStyle bold36 = TextStyle(
@@ -33,4 +32,24 @@ abstract class AppTextStyles {
     color: AppColors.primaryColor,
     fontFamily: 'Montserrat',
   );
+
+  static TextStyle regular12 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+  );
+static TextStyle regular14 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w400,
+  );
+
+
+  static TextStyle medium12 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+  );
+static TextStyle semiBold20 = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+  );
+
 }

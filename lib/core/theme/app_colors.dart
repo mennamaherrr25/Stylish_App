@@ -12,7 +12,7 @@ class AppColors {
 
   // ================= Text =================
   static const Color blackText = Color(0xFF1F1F1F);
-  static const Color greyText = Color(0xFF8F959E);
+  static const Color greyText = Color(0xFF676767);
   static const Color lightGreyText = Color(0xFFC4C4C4);
   static const Color whiteText = Colors.white;
 
@@ -20,6 +20,7 @@ class AppColors {
   static const Color buttonBlue = Color(0xFF2979FF);
   static const Color buttonGreen = Color(0xFF3ECF8E);
   static const Color buttonPink = Color(0xFFF83758);
+  static const Color iconbutton = Color(0xFFFCF3F6);
 
   // ================= Borders =================
   static const Color borderColor = Color(0xFFE5E5E5);
@@ -38,7 +39,7 @@ class AppColors {
   static const Color navUnselectedColor = Color(0xFF9E9E9E);
 
   // ================= Search =================
-  static const Color searchFillColor = Color(0xFFF3F3F3);
+  static const Color searchFillColor = Color(0xffF3F3F3);
 
   // ================= Containers =================
   static const Color lightContainer = Color(0xFFF8F8F8);
