@@ -12,6 +12,6 @@ class CustomTextWidget extends StatelessWidget {
   final TextAlign? textAlign;
   @override
   Widget build(BuildContext context) {
-    return Text(text, style: style, textAlign: textAlign);
+    return Text(text, style: style, textAlign: textAlign, maxLines: 3);
   }
 }

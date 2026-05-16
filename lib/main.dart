@@ -30,7 +30,7 @@ class StylishApp extends StatelessWidget {
           GlobalCupertinoLocalizations.delegate,
         ],
         supportedLocales: S.delegate.supportedLocales,
-        title: 'Flutter Demo',
+        title: 'Stylish App',
         theme: AppTheme.lightTheme,
         routerConfig: AppRouter.router,
       ),

@@ -13,6 +13,11 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w700,
   );
 
+  static TextStyle semiBold34 = TextStyle(
+    fontSize: 34.sp,
+    fontWeight: FontWeight.w600,
+  );
+
   static TextStyle semiBold18 = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeight.w600,
@@ -37,19 +42,17 @@ abstract class AppTextStyles {
     fontSize: 12.sp,
     fontWeight: FontWeight.w400,
   );
-static TextStyle regular14 = TextStyle(
+  static TextStyle regular14 = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeight.w400,
   );
-
 
   static TextStyle medium12 = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeight.w500,
   );
-static TextStyle semiBold20 = TextStyle(
+  static TextStyle semiBold20 = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.w600,
   );
-
 }

@@ -13,9 +13,9 @@ class SocialIconButtonsRow extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          SocialIconButton(icon: Assets.assetsIconsIcons8Google),
+          SocialIconButton(icon: Assets.assetsIconsGoogleIcon),
           SocialIconButton(icon: Assets.assetsIconsAppleIcon),
-          SocialIconButton(icon: Assets.assetsIconsFacebookAppSymbol),
+          SocialIconButton(icon: Assets.assetsIconsFacebookIcon),
         ],
       ),
     );

@@ -6,29 +6,21 @@ class Assets {
   /// assets/icons/apple_icon.svg
   static const String assetsIconsAppleIcon = "assets/icons/apple_icon.svg";
 
-  /// Assets for assetsIconsFacebookAppSymbol
-  /// assets/icons/facebook-app-symbol.svg
-  static const String assetsIconsFacebookAppSymbol = "assets/icons/facebook-app-symbol.svg";
-
   /// Assets for assetsIconsFacebookIcon
   /// assets/icons/facebook_icon.svg
   static const String assetsIconsFacebookIcon = "assets/icons/facebook_icon.svg";
-
-  /// Assets for assetsIconsGoogle
-  /// assets/icons/google.svg
-  static const String assetsIconsGoogle = "assets/icons/google.svg";
 
   /// Assets for assetsIconsGoogleIcon
   /// assets/icons/google_icon.svg
   static const String assetsIconsGoogleIcon = "assets/icons/google_icon.svg";
 
-  /// Assets for assetsIconsIcons8Google
-  /// assets/icons/icons8-google.svg
-  static const String assetsIconsIcons8Google = "assets/icons/icons8-google.svg";
-
   /// Assets for assetsImagesAppIcon
   /// assets/images/app_icon.png
   static const String assetsImagesAppIcon = "assets/images/app_icon.png";
+
+  /// Assets for assetsImagesGetStarted
+  /// assets/images/get_started.png
+  static const String assetsImagesGetStarted = "assets/images/get_started.png";
 
   /// Assets for assetsImagesOnboarding1
   /// assets/images/onboarding1.png

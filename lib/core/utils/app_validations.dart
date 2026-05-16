@@ -1,6 +1,6 @@
 class AppValidators {
   static String? validateEmail(final String? value) {
-    if (value == null || value.isEmpty) {
+    if (value == null || value.trim().isEmpty) {
       return 'Please enter your email';
     } else if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
       return 'Enter a valid email address';
@@ -9,7 +9,7 @@ class AppValidators {
   }
 
   static String? validatePassword(final String? value) {
-    if (value == null || value.isEmpty) {
+    if (value == null || value.trim().isEmpty) {
       return 'Please enter your password';
     } else if (value.length < 6) {
       return 'Password must be at least 6 characters';
@@ -21,7 +21,7 @@ class AppValidators {
     final String? value,
     final String password,
   ) {
-    if (value == null || value.isEmpty) {
+    if (value == null || value.trim().isEmpty) {
       return 'Please confirm your password';
     } else if (value != password) {
       return 'Passwords do not match';
@@ -39,7 +39,7 @@ class AppValidators {
   }
 
   static String? validatePhone(final String? value) {
-    if (value == null || value.isEmpty) {
+    if (value == null || value.trim().isEmpty) {
       return 'Please enter your phone number';
     } else if (!RegExp(r'^[0-9]{10,15}$').hasMatch(value)) {
       return 'Enter a valid phone number';
@@ -48,7 +48,7 @@ class AppValidators {
   }
 
   static String? validStreet(final String? value) {
-    if (value == null || value.isEmpty) {
+    if (value == null || value.trim().isEmpty) {
       return 'Please enter your Street Adress';
     }
     return null;

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:stylish_app/core/routing/app_routes.dart';
 import 'package:stylish_app/core/theme/app_colors.dart';
 import 'package:stylish_app/core/theme/app_text_styles.dart';
 import 'package:stylish_app/core/widgets/custom_button.dart';
@@ -8,7 +10,7 @@ import 'package:stylish_app/core/widgets/custom_text_widget.dart';
 import 'package:stylish_app/features/auth/widgets/auth_footer.dart';
 import 'package:stylish_app/features/auth/widgets/auth_intro.dart';
 import 'package:stylish_app/features/auth/widgets/divider_with_text.dart';
-import 'package:stylish_app/features/auth/widgets/login_form_field.dart';
+import 'package:stylish_app/features/auth/widgets/login_form_section.dart';
 import 'package:stylish_app/features/auth/widgets/social_icon_buttons_row.dart';
 import 'package:stylish_app/generated/l10n.dart';
 
@@ -27,27 +29,16 @@ class LoginView extends StatelessWidget {
               child: Column(
                 children: [
                   AuthIntro(text: 'Welcome\nBack!'),
-                  LoginFormFields(),
+                  LoginFormSectoin(),
 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      CustomTextButton(
-                        onPressed: () {},
-                        widget: CustomTextWidget(
-                          text: 'Forgot Password?',
-                          style: AppTextStyles.regular12.copyWith(
-                            color: AppColors.primaryColor,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 42.h),
-                  CustomButton(text: S.of(context).login),
+                
                   DividerWithText(),
                   SocialIconButtonsRow(),
-                  AuthFooter(),
+                  AuthFooter(
+                    text: 'Create An Account?',
+                    textButton: 'Sign Up',
+                    onPressed: () => context.go(AppRoutes.signup),
+                  ),
                 ],
               ),
             ),
@@ -57,15 +48,3 @@ class LoginView extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-

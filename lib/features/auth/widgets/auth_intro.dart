@@ -13,7 +13,7 @@ class AuthIntro extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.only(top: 53.h, bottom: 32.h),
+          padding: EdgeInsets.only(top: 43.h, bottom: 32.h),
           child: CustomTextWidget(
             text: text,
             textAlign: TextAlign.left,

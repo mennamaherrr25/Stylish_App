@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:stylish_app/core/routing/app_routes.dart';
 import 'package:stylish_app/core/theme/app_colors.dart';
 import 'package:stylish_app/core/theme/app_text_styles.dart';
 import 'package:stylish_app/core/widgets/custom_text_button.dart';
@@ -46,7 +47,7 @@ class OnboardingBottomBar extends StatelessWidget {
               CustomTextButton(
                 onPressed: () {
                   if (cubit.isLastPage) {
-                    context.go('/login');
+                    context.go(AppRoutes.login);
                   } else {
                     cubit.nextPage();
                   }

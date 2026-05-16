@@ -59,9 +59,14 @@ class S {
     return Intl.message('Login', name: 'login', desc: '', args: []);
   }
 
-  /// `nl`
-  String get jl {
-    return Intl.message('nl', name: 'jl', desc: '', args: []);
+  /// `Register`
+  String get register {
+    return Intl.message('Register', name: 'register', desc: '', args: []);
+  }
+
+  /// `Submit`
+  String get submit {
+    return Intl.message('Submit', name: 'submit', desc: '', args: []);
   }
 }
 

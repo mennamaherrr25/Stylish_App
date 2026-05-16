@@ -7,15 +7,37 @@ class CustomTextFormField extends StatelessWidget {
     required this.hint,
     this.prefixIcon,
     this.suffixIcon,
+    this.controller,
+    this.focusNode,
+    this.validator,
+    this.onFieldSubmitted,
+    this.textInputAction,
+    this.autofocus = false,
+    this.isPassword = false,
+    this.obscureText = false,
   });
 
   final Widget hint;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
-
+  final TextEditingController? controller;
+  final FocusNode? focusNode;
+  final String? Function(String?)? validator;
+  final void Function(String)? onFieldSubmitted;
+  final TextInputAction? textInputAction;
+  final bool autofocus;
+  final bool isPassword;
+  final bool obscureText;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscureText,
+      autofocus: autofocus,
+      validator: validator,
+      focusNode: focusNode,
+      controller: controller,
+      textInputAction: textInputAction,
+      onFieldSubmitted: onFieldSubmitted,
       cursorColor: AppColors.primaryColor,
       decoration: InputDecoration(
         prefixIcon: prefixIcon,
