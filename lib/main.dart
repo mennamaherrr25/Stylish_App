@@ -32,6 +32,7 @@ class StylishApp extends StatelessWidget {
         supportedLocales: S.delegate.supportedLocales,
         title: 'Stylish App',
         theme: AppTheme.lightTheme,
+      
         routerConfig: AppRouter.router,
       ),
     );
