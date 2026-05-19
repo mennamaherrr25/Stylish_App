@@ -1,4 +1,5 @@
-import 'package:stylish_app/features/auth/data/models/user_model.dart';
+import 'package:stylish_app/features/auth/data/models/login_model.dart';
+
 
 abstract class LoginStates {}
 
@@ -7,9 +8,9 @@ class LoginInitial extends LoginStates {}
 class LoginLoading extends LoginStates {}
 
 class LoginSuccess extends LoginStates {
-  final UserModel user;
+  final LoginModel loginModel;
 
-  LoginSuccess({required this.user});
+  LoginSuccess({required this.loginModel});
 }
 
 class LoginFailure extends LoginStates {

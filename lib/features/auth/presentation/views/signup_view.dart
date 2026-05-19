@@ -35,11 +35,8 @@ class SignUpView extends StatelessWidget {
         if (state is SignupFailure) {
           showErrorDialog(context, state.error);
 
-          // ScaffoldMessenger.of(context).showSnackBar(
-          //   SnackBar(
-          //     content: Text(state.error),
-          //   ),
-          // );
+       
+         
         }
       },
 

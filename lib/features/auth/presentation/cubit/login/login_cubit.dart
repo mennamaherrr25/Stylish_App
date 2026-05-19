@@ -2,8 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 
 import 'package:stylish_app/core/errors/failure.dart';
-
-import 'package:stylish_app/features/auth/data/models/user_model.dart';
+import 'package:stylish_app/features/auth/data/models/login_model.dart';
 import 'package:stylish_app/features/auth/data/repo/auth_repo.dart';
 
 import 'login_states.dart';
@@ -22,12 +21,9 @@ class LoginCubit extends Cubit<LoginStates> {
   }) async {
     emit(LoginLoading());
 
-    final Either<ErrorModel, UserModel> result = await authRepo.login(
+    final Either<ErrorModel, LoginModel> result = await authRepo.login(
       email: email,
       password: password,
-      // name: name,
-      // role: role,
-      // avatar: avatar,
     );
 
     result.fold(
@@ -37,8 +33,8 @@ class LoginCubit extends Cubit<LoginStates> {
       },
 
       // Success
-      (user) {
-        emit(LoginSuccess(user: user));
+      (loginModel) {
+        emit(LoginSuccess(loginModel: loginModel));
       },
     );
   }

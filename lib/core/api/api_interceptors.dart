@@ -8,7 +8,7 @@ class ApiInterceptors extends Interceptor {
     RequestOptions options,
     RequestInterceptorHandler handler,
   ) async {
-    options.headers['Content-Type'] = ['application/json'];
+    options.headers['Content-Type'] = 'application/json';
     // addAll({
     //   'Content-Type': 'application/json',
     //   'Accept': 'application/json',
