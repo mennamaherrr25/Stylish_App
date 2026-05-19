@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:stylish_app/core/routing/app_routes.dart';
@@ -8,6 +9,7 @@ import 'package:stylish_app/core/utils/app_validations.dart';
 import 'package:stylish_app/core/widgets/custom_button.dart';
 import 'package:stylish_app/core/widgets/custom_text_field.dart';
 import 'package:stylish_app/core/widgets/custom_text_widget.dart';
+import 'package:stylish_app/features/auth/presentation/cubit/signup/signup_cubit.dart';
 import 'package:stylish_app/generated/l10n.dart';
 
 class SignUpFormSection extends StatefulWidget {
@@ -122,14 +124,34 @@ class _SignUpFormSectionState extends State<SignUpFormSection> {
           ),
 
           SizedBox(height: 42.h),
+
           CustomButton(
             text: S.of(context).register,
+
             onPressed: () {
               if (formKey.currentState!.validate()) {
-                context.go(AppRoutes.login);
+                context.read<SignupCubit>().signup(
+                  name: 'Menna',
+
+                  email: emailController.text.trim(),
+
+                  password: passwordController.text.trim(),
+
+                  role: 'customer',
+
+                  avatar: 'https://picsum.photos/800',
+                );
               }
             },
           ),
+          // CustomButton(
+          //   text: S.of(context).register,
+          //   onPressed: () {
+          //     if (formKey.currentState!.validate()) {
+          //       context.go(AppRoutes.login);
+          //     }
+          //   },
+          // ),
         ],
       ),
     );
