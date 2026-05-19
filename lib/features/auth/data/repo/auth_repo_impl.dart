@@ -55,9 +55,9 @@ class AuthRepoImpl implements AuthRepo {
           "avatar": avatar,
         },
       );
-      return right(UserModel.fromJson(response)); // ✅
+      return right(UserModel.fromJson(response)); 
     } on ServerException catch (e) {
-      return left(ErrorModel(error: e.errorModel.error)); // ✅
+      return left(ErrorModel(error: e.errorModel.error)); 
     }
   }
 }
