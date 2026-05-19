@@ -11,7 +11,7 @@ class AppValidators {
   static String? validatePassword(final String? value) {
     if (value == null || value.trim().isEmpty) {
       return 'Please enter your password';
-    } else if (value.length < 6) {
+    } else if (value.length < 3) {
       return 'Password must be at least 6 characters';
     }
     return null;

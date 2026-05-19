@@ -5,7 +5,7 @@ import 'package:stylish_app/core/theme/app_text_styles.dart';
 import 'package:stylish_app/core/widgets/custom_button.dart';
 import 'package:stylish_app/core/widgets/custom_text_field.dart';
 import 'package:stylish_app/core/widgets/custom_text_widget.dart';
-import 'package:stylish_app/features/auth/widgets/auth_intro.dart';
+import 'package:stylish_app/features/auth/presentation/widgets/auth_intro.dart';
 import 'package:stylish_app/generated/l10n.dart';
 
 class ForgotPasswordView extends StatelessWidget {
