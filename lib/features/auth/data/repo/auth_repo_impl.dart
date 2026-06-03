@@ -3,6 +3,7 @@ import 'package:stylish_app/core/api/api_consumer.dart';
 import 'package:stylish_app/core/api/end_points.dart';
 import 'package:stylish_app/core/errors/exceptions.dart';
 import 'package:stylish_app/core/errors/failure.dart';
+import 'package:stylish_app/core/services/secure_storage_service.dart';
 import 'package:stylish_app/features/auth/data/models/user_model.dart';
 import 'package:stylish_app/features/auth/data/models/login_model.dart';
 import 'package:stylish_app/features/auth/data/repo/auth_repo.dart';
@@ -12,26 +13,27 @@ class AuthRepoImpl implements AuthRepo {
   AuthRepoImpl({required this.api});
 
   @override
-  @override
-Future<Either<ErrorModel, LoginModel>> login({
-  required String email,
-  required String password,
-}) async {
-  try {
-    final response = await api.post(
-      path: EndPoints.login,
-      data: {
-        "email": email,
-        "password": password,
-      },
-    );
+  Future<Either<ErrorModel, LoginModel>> login({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final response = await api.post(
+        path: EndPoints.login,
+        data: {"email": email, "password": password},
+      );
+      final loginModel = LoginModel.fromJson(response);
+      // Save Tokens
+      await TokenStorage.saveTokens(
+        accessToken: loginModel.accessToken,
+        refreshToken: loginModel.refreshToken,
+      );
 
-    return right(LoginModel.fromJson(response));
-
-  } on ServerException catch (e) {
-    return left(ErrorModel(error: e.errorModel.error));
+      return right(loginModel);
+    } on ServerException catch (e) {
+      return left(ErrorModel(error: e.errorModel.error));
+    }
   }
-}
 
   @override
   Future<Either<ErrorModel, UserModel>> signup({
@@ -52,9 +54,9 @@ Future<Either<ErrorModel, LoginModel>> login({
           "avatar": avatar,
         },
       );
-      return right(UserModel.fromJson(response)); 
+      return right(UserModel.fromJson(response));
     } on ServerException catch (e) {
-      return left(ErrorModel(error: e.errorModel.error)); 
+      return left(ErrorModel(error: e.errorModel.error));
     }
   }
 }
