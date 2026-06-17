@@ -92,7 +92,7 @@ class ProductsView extends StatelessWidget {
                           },
                         ),
 
-                        // 🔥 LOADING MORE OVERLAY IN CENTER
+                        //LOADING MORE OVERLAY IN CENTER
                         if (state is ProductsLoadingMore)
                           const Positioned.fill(
                             child: Center(child: CircularProgressIndicator()),
