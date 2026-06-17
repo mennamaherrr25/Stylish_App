@@ -1,8 +1,7 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hugeicons/hugeicons.dart';
-
+import 'package:stylish_app/core/theme/app_colors.dart';
 // class LayoutView extends StatelessWidget {
 //   const LayoutView({super.key});
 
@@ -23,9 +22,8 @@ import 'package:hugeicons/hugeicons.dart';
 //     );
 //   }
 // }
-import 'package:flutter/material.dart';
-import 'package:hugeicons/hugeicons.dart';
-import 'package:stylish_app/core/theme/app_colors.dart';
+
+
 
 class LayoutView extends StatefulWidget {
   const LayoutView({super.key});
@@ -208,3 +206,138 @@ class _LayoutViewState extends State<LayoutView> {
     );
   }
 }
+///////////////
+// import 'package:flutter/material.dart';
+
+// class LayoutView extends StatefulWidget {
+//   const LayoutView({super.key});
+
+//   @override
+//   State<LayoutView> createState() => _LayoutViewState();
+// }
+
+// class _LayoutViewState extends State<LayoutView> {
+//   int _currentIndex = 0;
+
+//   final List<Widget> _pages = [
+//     Center(child: Text('Home')),
+//     Center(child: Text('Wishlist')),
+//     Center(child: Text('Cart')),
+//     Center(child: Text('Search')),
+//     Center(child: Text('Setting')),
+//   ];
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: _pages[_currentIndex],
+//       bottomNavigationBar: BottomAppBar(
+//         color: Colors.white,
+//         elevation: 8,
+//         child: Row(
+//           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//           children: [
+//             _NavItem(
+//               icon: Icons.home,
+//               label: 'Home',
+//               index: 0,
+//               currentIndex: _currentIndex,
+//               onTap: (i) => setState(() => _currentIndex = i),
+//             ),
+//             _NavItem(
+//               icon: Icons.favorite_border,
+//               label: 'Wishlist',
+//               index: 1,
+//               currentIndex: _currentIndex,
+//               onTap: (i) => setState(() => _currentIndex = i),
+//             ),
+
+//             // ✅ الكارت في المنتصف مرفوع
+//             GestureDetector(
+//               onTap: () => setState(() => _currentIndex = 2),
+//               child: Container(
+//                 width: 56,
+//                 height: 56,
+//                 decoration: BoxDecoration(
+//                   color: Colors.white,
+//                   shape: BoxShape.circle,
+//                   boxShadow: [
+//                     BoxShadow(
+//                       color: Colors.black12,
+//                       blurRadius: 8,
+//                       offset: Offset(0, -2),
+//                     ),
+//                   ],
+//                 ),
+//                 child: Icon(
+//                   Icons.shopping_cart_outlined,
+//                   color: _currentIndex == 2
+//                       ? Color(0xFFF83758)
+//                       : Colors.black,
+//                 ),
+//               ),
+//             ),
+
+//             _NavItem(
+//               icon: Icons.search,
+//               label: 'Search',
+//               index: 3,
+//               currentIndex: _currentIndex,
+//               onTap: (i) => setState(() => _currentIndex = i),
+//             ),
+//             _NavItem(
+//               icon: Icons.settings_outlined,
+//               label: 'Setting',
+//               index: 4,
+//               currentIndex: _currentIndex,
+//               onTap: (i) => setState(() => _currentIndex = i),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// class _NavItem extends StatelessWidget {
+//   const _NavItem({
+//     required this.icon,
+//     required this.label,
+//     required this.index,
+//     required this.currentIndex,
+//     required this.onTap,
+//   });
+
+//   final IconData icon;
+//   final String label;
+//   final int index;
+//   final int currentIndex;
+//   final Function(int) onTap;
+
+//   bool get isSelected => currentIndex == index;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return GestureDetector(
+//       onTap: () => onTap(index),
+//       child: Column(
+//         mainAxisSize: MainAxisSize.min,
+//         children: [
+//           Icon(
+//             icon,
+//             color: isSelected ? Color(0xFFF83758) : Colors.black,
+//           ),
+//           SizedBox(height: 4),
+//           Text(
+//             label,
+//             style: TextStyle(
+//               fontSize: 12,
+//               color: isSelected ? Color(0xFFF83758) : Colors.black,
+//               fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }

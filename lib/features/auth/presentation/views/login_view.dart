@@ -57,11 +57,11 @@ class LoginView extends StatelessWidget {
                       const DividerWithText(),
 
                       const SocialIconButtonsRow(),
-
                       AuthFooter(
                         text: 'Create An Account?',
                         textButton: 'Sign Up',
-                        onPressed: () => context.go(AppRoutes.signup),
+                        onPressed: () => context.go(AppRoutes.home)
+                        //context.go(AppRoutes.signup),
                       ),
                     ],
                   ),
